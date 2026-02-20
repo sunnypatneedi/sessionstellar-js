@@ -1,6 +1,6 @@
 {
   "name": "@sessionstellar/core",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Scoring engine for AI orchestration quality — parse and score sessions programmatically. Zero network dependencies.",
   "type": "module",
   "exports": {
