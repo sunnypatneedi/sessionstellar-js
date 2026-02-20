@@ -4,15 +4,45 @@
 
 | Version | Supported |
 |---------|-----------|
-| 0.1.x   | Yes       |
+| 0.x (latest) | Yes |
 
 ## Reporting a Vulnerability
 
-If you discover a security vulnerability, please report it responsibly:
+**Please do not open a public GitHub issue for security vulnerabilities.**
 
-1. **Do not** open a public GitHub issue
-2. Email the maintainer or use GitHub's private vulnerability reporting
-3. Include steps to reproduce and potential impact
+Instead, report privately via one of these channels:
+
+- **GitHub private vulnerability reporting**: [github.com/sunnypatneedi/sessionstellar-js/security/advisories/new](https://github.com/sunnypatneedi/sessionstellar-js/security/advisories/new)
+
+### What to include
+
+- Description of the vulnerability
+- Steps to reproduce
+- Potential impact
+- Suggested fix (optional but appreciated)
+
+### What to expect
+
+- **Acknowledgement within 48 hours**
+- **Triage within 5 business days**
+- **Fix + coordinated disclosure** for confirmed vulnerabilities
+- Credit in the changelog and advisory (unless you prefer to remain anonymous)
+
+## Scope
+
+In scope:
+
+- Score manipulation via crafted session input (parser exploits)
+- CLI command injection via malicious filenames or session content
+- MCP server vulnerabilities (arbitrary code execution, data exfiltration)
+- Dependency vulnerabilities with direct exploitability
+
+Out of scope:
+
+- Issues in the web app (report to the [private repo](https://sessionstellar.com))
+- Social engineering attacks
+- Attacks requiring physical access
+- Issues in transitive dependencies with no exploitable path
 
 ## Architecture Notes
 

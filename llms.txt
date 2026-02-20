@@ -1,0 +1,38 @@
+# SessionStellar JS
+
+> Quality gate for AI orchestration — score sessions programmatically, in CI/CD, or from any MCP client.
+
+SessionStellar parses AI session transcripts and computes scores across 5 weighted metrics. It runs entirely offline with zero network dependencies.
+
+## Packages
+
+- @sessionstellar/core: Scoring engine and parser. npm install @sessionstellar/core
+- sessionstellar: CLI for terminal, CI/CD, and git hooks. npx sessionstellar score session.md
+- @sessionstellar/mcp: MCP server for Claude Code, Cursor, Windsurf. npx @sessionstellar/mcp
+
+## Quick Start
+
+```typescript
+import { parseSessionFile, ScoringEngine } from '@sessionstellar/core';
+
+const signals = parseSessionFile(content, 'session.md');
+const score = await ScoringEngine.score(signals, crypto.randomUUID());
+console.log(score.overallScore); // 0-100
+```
+
+## Metrics
+
+- Skill Diversity (20%): Range of tools and skills invoked relative to task complexity
+- Decision Depth (25%): Quality and quantity of explicit architectural decisions
+- Error Recovery (20%): How errors are caught, diagnosed, and resolved
+- Compound Learning (20%): Patterns recognized and applied across the session
+- Orchestration Mastery (15%): Effective use of agents and sub-processes
+
+## Links
+
+- Repository: https://github.com/sunnypatneedi/sessionstellar-js
+- Web app: https://sessionstellar.com
+- npm (core): https://www.npmjs.com/package/@sessionstellar/core
+- npm (cli): https://www.npmjs.com/package/sessionstellar
+- npm (mcp): https://www.npmjs.com/package/@sessionstellar/mcp
+- Cursor plugin: https://github.com/sunnypatneedi/sessionstellar-cursor
