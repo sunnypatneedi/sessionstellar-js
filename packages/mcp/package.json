@@ -1,0 +1,55 @@
+{
+  "name": "@sessionstellar/mcp",
+  "version": "0.1.1",
+  "description": "MCP server for AI orchestration scoring — score sessions from Claude Code, Cursor, Windsurf, or any MCP client",
+  "type": "module",
+  "bin": {
+    "sessionstellar-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.map"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "@sessionstellar/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "author": "Sunny Patneedi",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai",
+    "llm",
+    "orchestration",
+    "scoring",
+    "quality-gate",
+    "ai-governance",
+    "claude",
+    "cursor",
+    "windsurf",
+    "sessionstellar"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunnypatneedi/sessionstellar-js.git",
+    "directory": "packages/mcp"
+  },
+  "homepage": "https://sessionstellar.com",
+  "publishConfig": {
+    "access": "public"
+  }
+}

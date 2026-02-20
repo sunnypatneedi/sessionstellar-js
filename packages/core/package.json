@@ -1,0 +1,54 @@
+{
+  "name": "@sessionstellar/core",
+  "version": "0.1.1",
+  "description": "Scoring engine for AI orchestration quality — parse and score sessions programmatically. Zero network dependencies.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "!dist/**/*.map"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  },
+  "license": "MIT",
+  "author": "Sunny Patneedi",
+  "keywords": [
+    "ai",
+    "llm",
+    "orchestration",
+    "scoring",
+    "quality-gate",
+    "ci-cd",
+    "ai-governance",
+    "benchmark",
+    "parser",
+    "claude",
+    "cursor",
+    "sessionstellar"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunnypatneedi/sessionstellar-js.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://sessionstellar.com",
+  "publishConfig": {
+    "access": "public"
+  }
+}
